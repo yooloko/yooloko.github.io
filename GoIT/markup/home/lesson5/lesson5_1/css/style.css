@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'Helvetica Neue Regular';
+    src: url('../fonts/helveticaneue-thin-webfont.eot');
+    src: url('../fonts/helveticaneue-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneue-thin-webfont.woff2') format('woff2'),
+         url('../fonts/helveticaneue-thin-webfont.woff') format('woff'),
+         url('../fonts/helveticaneue-thin-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+.wrapper{
+  width: 1920px;
+  height: 1115px;
+  font-family: "Helvetica Neue Regular";
+}
+
+/*BACKGROUND PHOTO*/
+.background{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+/*MAIN MENU*/
+.main_menu{
+  height: 35px;
+  font-size: 14px;
+}
+.main_menu ul{
+  height: 100%;
+  background-color: #074c88;
+  background-image: url(../img/noise.png);
+}
+.main_menu li{
+  float: right;
+  height: 100%;
+  padding: 0 15px;
+}
+/*menu links*/
+.main_menu a{
+  padding-top: 10px;
+  display: inline-block;
+  height: 100%;
+  color: #60b5ed;
+  text-decoration: none;
+}
+.active_li:hover{
+  background-color:#4eabda;
+  color: white;
+}
+.active_li a:hover{
+  color: white;
+}
+.main_menu .ola p{
+  padding-bottom: 11px;
+  padding-left: 15px;
+  background: linear-gradient(#49a4d7, #2e7ac4);
+}
+.main_menu .ola p a{
+color: white;
+text-decoration: underline;
+font-size: 13px;
+}
+.main_menu p {
+  color: white;
+}
+.line p{
+  font-size: 30px;
+  color: #60b5ed;
+  margin-top: 1px;
+}
+
+/*CONTAINER*/
+.container{
+  font-family: "Helvetica Neue Regular";
+  color: white;
+  text-align: center;
+}
+.container p{
+  font-size: 10px;
+  font-family: Tahoma;
+  margin-top: 18px;
+  line-height: 16px;
+}
+
+/*TOP BLOCK CADASTRE-SE*/
+.top_block{
+  width: 560px;
+  height: 40px;
+  position: absolute;
+  top: 214px;
+  left: 700px;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  color: white;
+  padding-top: 20px;
+}
+
+/*BOTTOM BLOCK*/
+.bottom_block{
+  margin: 0 auto;
+  width: 560px;
+  height: 550px;
+  position: absolute;
+  top: 276px;
+  left: 700px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/*FACEBOOK BUTTON*/
+
+/*OU*/
+.OU{
+  margin-top: 5px;
+  color: #999;
+}
+.OU hr{
+  float: left;
+  width: 44%;
+  margin-top: 7px;
+  height: 1px;
+  border: none;
+  border-bottom: 1px solid black;
+  background: #666666;
+}
+.OU p{
+  float: left;
+  padding: 0 5px;
+  color:#999;
+  font-size: 14px;
+}
+hr {
+background-color: #666;
+border-bottom:1px solid #000;
+} 
+
+/*FORM LIST*/
+.form_list{
+  text-align: center;
+}
+.form_list li{
+  margin: 20px;
+}
+.form_list li input{
+  font-family: "Helvetica Neue Regular";
+  line-height: 34px;
+  width: 275px;
+  padding-left: 18px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+.form_list li input:hover{
+  background-color: #1b5288;
+  border-bottom: 1px solid #699ccd;
+  -webkit-box-shadow: 0px 0px 7px 3px rgba(104,155,204,0.89);
+  -moz-box-shadow: 0px 0px 7px 3px rgba(104,155,204,0.89);
+}
+
+/*CREATE ACCOUNT BUTTON*/
+a.button_account {
+  display: block;
+  margin: 22px 200px;
+  padding: 8px 14px;
+  color: #fff;
+  text-decoration: none;
+  border-top: 2px solid #67c6e6;
+  border-radius: 4px;
+  background: linear-gradient(#50aedb, #2e7ac4);
+  box-shadow: inset 0px 0px 5px rgba(107,184,231,0.5);
+  outline: none; 
+} 

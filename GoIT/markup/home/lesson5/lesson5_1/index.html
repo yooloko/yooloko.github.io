@@ -2,50 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cadastre-se</title>
+  <title>Cadastre_se</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <div class="navigation">
-      <ul>
-      <li><a href="#">Meu YouBike</a></li>
-      <li><a href="#">Vender</a></li>
-      <li><a href="#">Forum</a></li>
-      <li><a href="#">Contato</a></li>
-      <li><a href="#">Ajuda</a></li>
-      <!--<li>Minhas Ofertas</li>
-      <li>Ola! <a href="#">Entrar</a> ou <a href="#">Cadastre-se</a></li>-->
-      </ul>
-    </div>
-    <div class="header">
-      <p>Cadastre-se</p>
-    </div>
-    <div class="form_list">
-      <p class="but-n" style="text-align: center"><button>Log In with Facebook</button></p>
 
-      <ul class="line">
-        <li><hr></li>
-        <li>OU</li>
-        <li><hr></li>
-      </ul>
+  <div class="wrapper">
+
+    <!--MAIN MENU-->
+    <div class="main_menu">
+        <ul>
+          <li class="active_li ola">
+            <p>Ola! <a href="">Entrar</a> ou <a href="">Cadastre-se</a></p>
+          </li>
+          <li class="active_li">
+            <a href="">Minhas Ofertas</a>
+          </li>          
+          <li class="line">
+            <p>|</p>
+          </li>
+          <li class="active_li"><a href="">Ajuda</a></li>
+          <li class="active_li"><a href="">Contato</a></li>
+          <li class="active_li"><a href="">Forum</a></li>
+          <li class="active_li"><a href="">Vender</a></li>
+          <li class="active_li"><a href="">Meu YouBike</a></li>
+        </ul>
+    </div>
+
+    <!--BACKGROUND PHOTO-->
+   <img class="background" src="img/bckgnd.jpg" alt="">
+
+   <div class="container">
+      <div class="top_block">
+        Cadastre-se
+      </div>
+      <div class="bottom_block">
+       <a href="https://www.facebook.com/" class="facebook_button">
+          <span><strong>f</strong></span>
+          <span>Log In with facebook</span>
+          <span>›</span>
+        </a>
+      <div class="OU">
+          <hr>
+          <p>OU</p>
+          <hr>
+      </div>
       <form action="/">
-      <ul class="f_">
-        <li><input type="text" id="first_name" placeholder="First Name"></li>
-        <li><input type="text" id="last_name" placeholder="Last Name"></li>
-        <li><input type="text" id="email_address" placeholder="Email Address"></li>
-        <li><input type="text" id="chose_password" placeholder="Chooose Password"></li>
-        <li><input type="text" id="password_confirm" placeholder="Password Confirm"></li>
-      </ul>
+        <ul class="form_list">
+          <li><input type="text" id="first_name" placeholder="First Name"></li>
+          <li><input type="text" id="last_name" placeholder="Last Name"></li>
+          <li><input type="text" id="email_address" placeholder="Email Address"></li>
+          <li><input type="text" id="chose_password" placeholder="Chooose Password"></li>
+          <li><input type="text" id="password_confirm" placeholder="Password Confirm"></li>
+        </ul>
         <input type="checkbox" name="Send_me" id="#">
-        <span>Send me Youbike updates and tips</span>
-        <p style="text-align: center"><button>Create my Account</button></p>
+        <span>Send me Youbike updates and tips</span><br>
+        <a href="#" class="button_account">Create my Account</a>
       </form>
-      <p>By clicking the button above, you agree to the Terms of Servise</p>
-      <p>Xiew our Privacy Policy</p>
+      <p>By clicking the button above, you agree to the Terms of Servise<br>Xiew our Privacy Policy</p>
     </div>
   </div>
 </body>
 </html>
+
 
