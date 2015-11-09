@@ -18,7 +18,7 @@ body{
   width: 968px;
   height: 40px;
   background-color: #5b5b5b;
-  height:40px;
+  height: 40px;
   margin: 0 auto;
 }
 .menu_h li{
@@ -59,7 +59,7 @@ body{
 .sidebar li:hover{
   background: #f9f9f9;
   color: #2c2c2c;
-  padding-left: 15px;
+  padding-left: 40px;
 
 }
 

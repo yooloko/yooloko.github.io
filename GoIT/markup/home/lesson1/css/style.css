@@ -1,7 +1,7 @@
 body{
   background-color: #eee;
 }
-.overall{
+.main{
   width: 410px;
   padding: 32px 50px 42px;
   margin: 0 auto;
@@ -13,17 +13,25 @@ body{
 .block1, 
 .block2, 
 .block3{
-  border-bottom: 1px #444444;
+  border-bottom: 1px solid #444444;
 }
 .text1{
   text-align: center;
   font-size: 23px;
   font-weight: bold;
 }
-.photo{
-  text-align: center;
-  line-height: 0;
+
+#img-radius {
+   margin-left: auto;
+    margin-right: auto;
+ width:128px; 
+ height: 170px;
+ border: 1px solid #eee;
+ border-radius: 8px;
+ -webkit-border-radius: 8px;
+ -moz-border-radius: 8px;
 }
+
 .text3{
   margin: 12px 0 14px;
 }
@@ -42,3 +50,6 @@ body{
   padding: 0 14px;
   line-height: 26px;
 } 
+span{
+  display: block;
+}
