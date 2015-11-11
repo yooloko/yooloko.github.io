@@ -52,11 +52,12 @@
   color: white;
 }
 .main_menu .ola p{
-  padding-bottom: 11px;
-  padding-left: 15px;
+  padding: 0 15px 11px 15px;
   background: linear-gradient(#49a4d7, #2e7ac4);
+  border: 1px solid #51a0da;
 }
-.main_menu .ola p a{
+
+.main_menu .ola a{
 color: white;
 text-decoration: underline;
 font-size: 13px;
@@ -64,7 +65,21 @@ font-size: 13px;
 .main_menu p {
   color: white;
 }
-.line p{
+.main_menu .minhas:before{
+    content: " ";  
+    text-align: left;  
+    line-height: 35px;   
+    float: left;  
+    position: relative;
+    background: url(../img/flag.png);  
+    background-repeat: no-repeat;
+    display: block;  
+    padding-right: 9px;
+    height: 35px;  
+    width: 25px; 
+    vertical-align: middle;
+}
+.main_menu .line p{
   font-size: 30px;
   color: #60b5ed;
   margin-top: 1px;
@@ -108,6 +123,39 @@ font-size: 13px;
 }
 
 /*FACEBOOK BUTTON*/
+.fb_button{
+  margin: 35px auto;
+  width: 300px;
+  height: 30px;
+}
+.fb_button .icon{
+  width: 35px;
+  height: 35px;
+  border-radius: 5px 0px 0px 5px;
+  border-right: 1px solid #1f3d71;
+  font-family: "Arial Bold", sans-serif;
+  font-weight: bolder;
+  font-size: 22px;
+}
+.fb_button .title{
+  border-radius: 0px 5px 5px 0px;
+  border-left: 1px solid #4b67a6;
+  padding: 0px 30px 0px 30px;
+}
+.fb_button .icon,
+.fb_button .title{
+  display: inline-block;
+  float: left;
+  background: linear-gradient(#40579a, #30407b);
+  border-top: 1px solid #7687b3;
+  line-height: 35px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+strong{
+  font-weight: bold;
+}
 
 /*OU*/
 .OU{
@@ -146,7 +194,7 @@ border-bottom:1px solid #000;
   line-height: 34px;
   width: 275px;
   padding-left: 18px;
-  background-color: #000;
+  background-color: #0f0f0f;
   color: white;
   border: none;
   border-bottom: 1px solid gray;
