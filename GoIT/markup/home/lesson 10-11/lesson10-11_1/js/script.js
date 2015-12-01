@@ -4,23 +4,33 @@ function pow(){
 	var exponent = prompt('and the exponent', 1); 
 	var result = 1;
 	var counter = 1;
-	
-	switch(true){
 
-		case exponent > 0 :
-		 	debugger;
-	 		while(counter <= exponent){
-	 		result *= base;
-	 		++counter;
-	 		}
-	 		return result;
+	if(exponent != null && base != null){
 
-		case exponent === 0 :
-			result = 1;
-	 		return result;
+		switch(true){
 
-		case exponent < 0 :
-			alert('Incorrect exponent!');
+			case exponent > 0 :
+		 		debugger;
+	 			while(counter <= exponent){
+	 			result *= base;
+	 			++counter;
+	 			}
+	 			return result;
+
+			case exponent === 0 :
+				result = 1;
+	 			return result;
+
+			case exponent < 0 :
+				while(counter <= Math.abs(exponent)){
+				result *= 1/base;
+				++counter;
+				}
+				return result;
+		}
+
+	} else {
+		alert('null!');
 	}
 }
 var powResult = pow();
