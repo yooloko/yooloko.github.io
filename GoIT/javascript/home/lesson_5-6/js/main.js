@@ -1,10 +1,11 @@
 var timer = document.getElementById('timer'); 
 var toggleBtn = document.getElementById('toggle');
 var resetBtn = document.getElementById('reset');
+var splitBtn = document.getElementById('split');
 
 var watch = new Stopwatch({
 	elem: timer,
-	delay: 200
+	delay: 1000
 });
 
 function start() {
@@ -23,4 +24,8 @@ toggleBtn.addEventListener('click', function() {
 
 resetBtn.addEventListener('click', function(){
   watch.reset();
+});
+
+splitBtn.addEventListener('click', function(){
+	watch.split();
 });

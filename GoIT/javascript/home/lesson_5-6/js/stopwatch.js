@@ -23,9 +23,16 @@ function Stopwatch(opts) {
 
 	function timeFormatter(timeInMilliseconds){
 		var time = new Date(timeInMilliseconds);
+		// console.log('time', time);
+		var hours = (time.getHours() - 2).toString();
+		// console.log('hours', hours);
 		var minutes = time.getMinutes().toString();
 		var seconds = time.getSeconds().toString();
 		var milliseconds = time.getMilliseconds().toString();
+
+		if(hours.length < 2){
+			hours = '0' + hours;
+		}
 
 		if(minutes.length < 2) {
 			minutes = '0' + minutes;
@@ -39,14 +46,14 @@ function Stopwatch(opts) {
 			milliseconds = '0' + milliseconds;
 		}
 
-		return minutes + ' : ' + seconds + ' . ' + milliseconds;
+		return hours + ' : ' + minutes + ' : ' + seconds + ' . ' + milliseconds;
 	}
 
 	this.isOn = false;
 
 	this.start = function() {
 		if(!this.isOn) {
-			interval = setInterval(update.bind(this), 10);
+			interval = setInterval(update.bind(this), 50);
 			offset = Date.now();
 			this.isOn = true;
 		}
@@ -61,11 +68,23 @@ function Stopwatch(opts) {
 	};
 
 	this.reset = function() {
-		if(!this.isOn) {
-			time = 0;
-			update();
-		}
-		
+		time = 0;
+		update();
+		this.isOn = false;		
 	};
+
+	this.split =  function() {
+		if (this.isOn){
+			console.log('BOOOO!!');
+			var div = document.createElement('div');
+			div.className = "split-is-on";
+			div.innerHTML = timeFormatter(time);
+			document.body.appendChild(div);
+
+
+		}
+	}
+
+
 }
 
