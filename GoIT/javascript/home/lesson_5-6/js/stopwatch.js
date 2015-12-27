@@ -86,6 +86,7 @@ function Stopwatch(opts) {
 
 			var divSplit = document.createElement('div'); 
 			divSplit.innerHTML = timeFormatter(time);
+			divSplit.classList.add("onesplit");
 			var splitbox = document.querySelector('.splitbox');
 			splitbox.appendChild(divSplit);
 		}
