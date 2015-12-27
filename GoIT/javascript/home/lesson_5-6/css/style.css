@@ -92,3 +92,11 @@ body{
   text-decoration: none;
   border: solid #ffffff 1px;
 }
+
+.onesplit{
+  font-family: "Verdana";
+  font-size: 28px;
+  font-weight: 300px;
+  background-color: #252423;
+  color: white;
+}
