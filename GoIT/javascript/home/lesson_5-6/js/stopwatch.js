@@ -70,18 +70,24 @@ function Stopwatch(opts) {
 	this.reset = function() {
 		time = 0;
 		update();
-		this.isOn = false;		
+		this.isOn = false;
+		var removeSplit = document.body.querySelector('.splitbox');
+		document.body.removeChild(removeSplit);
 	};
 
 	this.split =  function() {
 		if (this.isOn){
 			console.log('BOOOO!!');
-			var div = document.createElement('div');
-			div.className = "split-is-on";
-			div.innerHTML = timeFormatter(time);
-			document.body.appendChild(div);
+			var mainDivSplit = document.createElement('div');
+			mainDivSplit.classList.add("splitbox");
+			var afterSplitBox = document.querySelector('.aftersplitbox');
+			document.body.insertBefore(mainDivSplit, afterSplitBox);
 
 
+			var divSplit = document.createElement('div'); 
+			divSplit.innerHTML = timeFormatter(time);
+			var splitbox = document.querySelector('.splitbox');
+			splitbox.appendChild(divSplit);
 		}
 	}
 
