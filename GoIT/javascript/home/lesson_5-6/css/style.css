@@ -35,7 +35,7 @@ body{
   padding: 10px 20px 10px 20px;
   border: solid #ffffff 2px;
   text-decoration: none;
-  border: solid #ffffff 2px;
+  border: solid #ffffff 1px;
 }
 #toggle:hover,
 #reset:hover,
@@ -51,7 +51,7 @@ body{
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
-  border: solid #ffffff 2px;
+  border: solid #ffffff 1px;
 }
 
 #reset{
@@ -70,7 +70,7 @@ body{
   padding: 10px 20px 10px 20px;
   border: solid #ffffff 2px;
   text-decoration: none;
-  border: solid #ffffff 2px;
+  border: solid #ffffff 1px;
 }
 
 #split{
@@ -90,5 +90,5 @@ body{
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
-  border: solid #ffffff 2px;
+  border: solid #ffffff 1px;
 }
