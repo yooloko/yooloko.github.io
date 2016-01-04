@@ -1,7 +1,5 @@
 // jQuery | $
 
-alert('BOOOOOO');
-
 	var $wrapperTabs = $('<div class="wrapper"></div>');
 	
 	var $contents = $('<div class="tab_content"></div>');
