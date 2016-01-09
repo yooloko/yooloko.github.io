@@ -41,9 +41,9 @@
  	var i = 0;
  	$('.tool-tip-arr').each(function(){
  	$(this)
- 			.append('titleArr[i]')
- 			.prependTo('form')
- 			.hide()
+ 		.append('titleArr[i]')
+ 		.prependTo('form')
+ 		.hide()
  		.css({
  			top: e.pageY + 10,
  			left: e.pageX + 30
