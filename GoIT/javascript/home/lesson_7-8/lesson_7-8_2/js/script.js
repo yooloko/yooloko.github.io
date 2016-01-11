@@ -37,9 +37,15 @@
  		debugger;
  	});
 
- 	// ??var toolTipArr = [<div class='tool-tip-arr'><div/>, <div class='tool-tip-arr'><div/>, <div class='tool-tip-arr'><div/>];
+ 	var toolTipArrObjects = ["<div class='tool-tip-arr'><div/>", "<div class='tool-tip-arr'><div/>"," <div class='tool-tip-arr'><div/>"];
+ 	var toolTipArr = jQuery.makeArray(toolTipArrObjects);
  	var i = 0;
+ 	console.log('toolTopArr', toolTipArr);
+ 	console.log('.tool-tip-arr', $('.tool-tip-arr'));
+ 	debugger;
  	$('.tool-tip-arr').each(function(){
+ 	console.log('Div', $(this));
+ 	debugger;
  	$(this)
  		.append('titleArr[i]')
  		.prependTo('form')
@@ -51,3 +57,5 @@
  		i++;
  	});
  });
+
+  	
