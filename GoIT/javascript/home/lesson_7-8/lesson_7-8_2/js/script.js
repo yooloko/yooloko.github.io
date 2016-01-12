@@ -11,7 +11,7 @@
  		$this.mouseover(function(e){
  			$toolTip
  				.append(title)
- 				.prependTo('form')
+ 				.prependTo(form)
  				.hide()
  				.css({
  					top: e.pageY + 10,
@@ -38,8 +38,8 @@
  	$('div:not(".wrapper")').each(function(){
  	debugger;
  	$(this)
- 		.append('titleArr[i]')
- 		.prependTo('form')
+ 		.append(titleArr)
+ 		.prependTo(form)
  		.hide()
  		.css({
  			top: e.pageY + 10,
