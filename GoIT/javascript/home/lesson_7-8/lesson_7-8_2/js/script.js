@@ -4,14 +4,11 @@
 
  (function() {
  	var $toolTip = $('<div class="tooltip"></div>');
- 	// debugger;
  	$('input[id]').each(function(){
  		var $this = $(this),
  		title = $this.attr('title');
  		// this.title = "";
- 		// debugger;
  		$this.mouseover(function(e){
- 			// debugger;
  			$toolTip
  				.append(title)
  				.prependTo('form')
@@ -33,18 +30,12 @@
  	var titleArr = [];
  	$('input').each(function(){
  		titleArr.push($(this).attr('title'));
- 		console.log('title', $(this).attr('title'));
- 		debugger;
  	});
-
- 	var toolTipArrObjects = ["<div class='tool-tip-arr'><div/>", "<div class='tool-tip-arr'><div/>"," <div class='tool-tip-arr'><div/>"];
- 	var toolTipArr = jQuery.makeArray(toolTipArrObjects);
+ 	var toolTipArrObject = ["<div><div/>","<div><div/>","<div><div/>"];
+ 	var toolTipArr = jQuery.makeArray(toolTipArrObject);
  	var i = 0;
- 	console.log('toolTopArr', toolTipArr);
- 	console.log('.tool-tip-arr', $('.tool-tip-arr'));
  	debugger;
- 	$('.tool-tip-arr').each(function(){
- 	console.log('Div', $(this));
+ 	$('div:not(".wrapper")').each(function(){
  	debugger;
  	$(this)
  		.append('titleArr[i]')
@@ -57,5 +48,3 @@
  		i++;
  	});
  });
-
-  	
