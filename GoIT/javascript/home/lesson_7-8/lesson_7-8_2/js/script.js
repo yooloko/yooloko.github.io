@@ -1,8 +1,10 @@
+// jQuery | $
+
  alert('BOOO!1');
 
  (function() {
  	var $toolTip = $('<div class="tooltip"></div>');
- 	$('input[id]').each(function(){
+ 	$('input').each(function(){
  		var $this = $(this),
  		title = $this.attr('title');
  		// this.title = "";
@@ -15,25 +17,26 @@
  					top: e.pageY + 10,
  					left: e.pageX + 30
  				}).fadeIn(300);
+ 			$this.removeAttr(title);
  		}, 
  		function() {
  			$('.tooltip').empty().remove();
  		});
  	});
-
  })();
 
   $('.show-help').on('click', function(){
- 	alert('BOOO!2');
- 	$('input').each(function(){
- 		var $divToolTip = $('<div class="tooltip"></div>');
- 		$divToolTip
- 			.text($(this).attr('title'))
- 			.prependTo('form')
- 			.hide()
- 			.css({
- 					top: $(this).position().top + 10,
- 					left: $(this).position().left + 30
- 			}).fadeIn(300);
- 	});
- });
+   	alert('BOOO!2');
+   	$('input').each(function(){
+  	var $divToolTip = $('<div class="tooltip"></div>');
+   		$divToolTip
+  			.text($(this).attr('title'))
+  			.prependTo('.wrapper')
+  			.hide()
+  			.css({
+  					"background-color": "blue",
+  					"top": "300px",
+  					"left": "400px"
+  			}).fadeIn(300);
+  	});
+  });
