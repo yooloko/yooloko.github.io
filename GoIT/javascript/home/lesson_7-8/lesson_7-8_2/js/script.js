@@ -34,9 +34,16 @@
   			.prependTo('.wrapper')
   			.hide()
   			.css({
-  					"background-color": "blue",
-  					"top": "300px",
-  					"left": "400px"
+  					"padding": "5px 0 6px 5px",
+            "background-color": "#3e9ee3",
+            "color":"#fff",
+            "border-radius": "3px",
+            "font-family": "Lato Latin Regular",
+            "margin-top": "10px",
+            "margin-bottom": "10px",
+            "font-size": "14px",
+            "top": "300px",
+            "left": "400px"
   			}).fadeIn(300);
   	});
   });
