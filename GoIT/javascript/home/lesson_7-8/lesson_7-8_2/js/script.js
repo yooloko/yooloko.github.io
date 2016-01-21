@@ -1,49 +1,96 @@
-// jQuery | $
+$(function () {
 
- alert('BOOO!1');
+  var firstname = $('#firstname').attr('title');
+  var lastname = $('#lastname').attr('title');
+  var address = $('#address').attr('title');
 
- (function() {
- 	var $toolTip = $('<div class="tooltip"></div>');
- 	$('input').each(function(){
- 		var $this = $(this),
- 		title = $this.attr('title');
- 		// this.title = "";
- 		$this.mouseover(function(e){
- 			$toolTip
- 				.append(title)
- 				// .prependTo(form)
- 				.hide()
- 				.css({
- 					top: e.pageY + 10,
- 					left: e.pageX + 30
- 				}).fadeIn(300);
- 			$this.removeAttr(title);
- 		}, 
- 		function() {
- 			$('.tooltip').empty().remove();
- 		});
- 	});
- })();
+  var firstnameTooltip = ('<div class = "tooltip firstnameTooltip">' + firstname + '</div>');
+  var lastnameTooltip = ('<div class = "tooltip lastnameTooltip">' + lastname + '</div>');
+  var addressTooltip = ('<div class = "tooltip addressTooltip">' + address + '</div>');
 
-  $('.show-help').on('click', function(){
-   	alert('BOOO!2');
-   	$('input').each(function(){
-  	var $divToolTip = $('<div class="tooltip"></div>');
-   		$divToolTip
-  			.text($(this).attr('title'))
-  			.prependTo('.wrapper')
-  			.hide()
-  			.css({
-  					"padding": "5px 0 6px 5px",
-            "background-color": "#3e9ee3",
-            "color":"#fff",
-            "border-radius": "3px",
-            "font-family": "Lato Latin Regular",
-            "margin-top": "10px",
-            "margin-bottom": "10px",
-            "font-size": "14px",
-            "top": "300px",
-            "left": "400px"
-  			}).fadeIn(300);
-  	});
+  var tooltipRemove = function() {
+    $(this).remove();
+  };
+
+  var tooltipHide = function() {
+    $(this).attr('title', firstname);
+    $('.tooltip').eq($(this).index()).animate({
+      opacity: 0
+    }, 300, tooltipRemove);
+  };
+
+  var lastnameTooltipVisible = function() {
+    $(this).removeAttr('title');
+    if ( !$('div').is($(this)) ) {
+      $(this).parent().parent().append(lastnameTooltip);
+      $(this).animate({
+        opacity: 1
+      }, 300);
+    }
+  };
+
+  var firstnameTooltipVisible = function() {
+    $(this).removeAttr('title');
+    if ( !$('div').is($(this)) ) {
+      $(this).parent().parent().append(firstnameTooltip);
+      $(this).animate({
+        opacity: 1
+      }, 300);
+    }
+  };
+
+  var addressTooltipVisible = function() {
+    $(this).removeAttr('title');
+    if ( !$('div').is($(this)) ) {
+      $(this).parent().parent().append(addressTooltip);
+      $(this).animate({
+        opacity: 1
+      }, 300);
+    }
+  };
+
+  $('#firstname').on({
+    mouseover: firstnameTooltipVisible,
+    mouseout: tooltipHide
   });
+
+  $('#lastname').on({
+    mouseover: lastnameTooltipVisible,
+    mouseout: tooltipHide
+  });
+
+  $('#address').on({
+    mouseover: addressTooltipVisible,
+    mouseout: tooltipHide
+  });
+
+  var tooltipVisible = function(event) {
+    event.preventDefault();
+    $('input').removeAttr('title');
+
+    if ( !$('div').is('.firstnameTooltip') ) {
+      $('.form_firstname').append(firstnameTooltip);
+      $(this).animate({
+        opacity: 1
+      }, 300);
+    }
+
+    if ( !$('div').is('.lastnameTooltip') ) {
+      $('.form_lastname').append(lastnameTooltip);
+      $(this).animate({
+        opacity: 1
+      }, 300);
+    }
+
+    if ( !$('div').is('.addressTooltip') ) {
+      $('.form_address').append(addressTooltip);
+      $(this).animate({
+        opacity: 1
+      }, 300);
+    }
+  };
+
+  $('.show-help').on({
+    click: tooltipVisible
+  });
+});
