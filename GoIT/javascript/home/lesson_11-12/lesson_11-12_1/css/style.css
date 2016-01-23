@@ -1,43 +1,63 @@
-/**{
+{
   margin: 0;
   padding: 0;
-}*/
+}
 
 .carousel-hider {
-    width: 600px;
+    width: 1132px;
     overflow: hidden;
     float: left;
 }
 
 .carousel-list {
     list-style: none;
-    width: 10000px;
+    width: 2840px;
     padding: 0px;
     position: relative;
 }
 
 .carousel-element {
     display: block;
-    margin-right: 25px;
+    margin-right: 4px;
     float: left;
 }
 
 .carousel-element img {
-    max-width: 100px;
+    max-width: 280px;
 }
 
 .carousel-arrow-left, .carousel-arrow-right {
     float: left;
     display: block;
-    border: 1px solid grey;
-    background-color: lightgray;
+    border: 1px solid #e21f36;
     padding: 5px;
     margin-top: 50px;
+    height: 26px;
+    width: 26px;
+    border-radius: 18px;
+    background-color: #e21f36;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.carousel-arrow-left:hover, .carousel-arrow-right:hover {
-    cursor: pointer;
-    background-color: grey;
+.carousel-arrow-right {
+    background-image: url(../img/arrow_right_without_borders.png);
+}
+
+.carousel-arrow-left {
+    background-image: url(../img/arrow_left_without_borders.png);
+}
+
+.carousel-arrow-left:hover {
+    border-bottom: 15px solid #e21f36;
+    border-top: 15px solid #e21f36;
+    background-image: url(../img/arrow_left_without_borders.png);
+}
+
+.carousel-arrow-right:hover {
+    border-bottom: 15px solid #e21f36;
+    border-top: 15px solid #e21f36;
+    background-image: url(../img/arrow_right_without_borders.png);
 }
 
 .carousel-arrow-left {
@@ -46,4 +66,13 @@
 
 .carousel-arrow-right {
     margin-left: 25px;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    color: #6f5356;
+    font-size: 20px;
+    font-family: Verdana;
+    width: 250px;
 }

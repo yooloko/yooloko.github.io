@@ -1,30 +1,27 @@
 (function($) {
     $.fn.carousel = function() {
-        alert('BOOO!');
         var leftUIEl = $('.carousel-arrow-left');
         var rightUIEl = $('.carousel-arrow-right');
         var elementsList = $('.carousel-list');
-
-        console.log('elementsList', elementsList);
  
-        var pixelsOffset = 125;
+        var pixelsOffset = 284;
         var currentLeftValue = 0;
         var elementsCount = elementsList.find('li').length;
-        var minimumOffset = - ((elementsCount - 5) * pixelsOffset);
+        var minimumOffset = - ((elementsCount - 4) * pixelsOffset);
         var maximumOffset = 0;
  
         leftUIEl.click(function() {        
             if (currentLeftValue != maximumOffset) {
-                currentLeftValue += 125;
-                elementsList.animate({ left : currentLeftValue + "px"}, 500);
+                currentLeftValue += 284;
+                elementsList.animate({ left : currentLeftValue + "px"}, 700);
             }        
         });
  
         rightUIEl.click(function() {        
             if (currentLeftValue != minimumOffset) {
-                currentLeftValue -= 125;
-                elementsList.animate({ left : currentLeftValue + "px"}, 500);
+                currentLeftValue -= 284;
+                elementsList.animate({ left : currentLeftValue + "px"}, 700);
             }        
         });
-    }
+    };
 })(jQuery);
