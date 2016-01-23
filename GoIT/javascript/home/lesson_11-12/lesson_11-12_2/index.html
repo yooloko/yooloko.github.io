@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple JavaScript Templating</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="js/tmpl.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <script type="text/template" id="test">
+  <div class="main">
+  <div class="block1">
+    <p class="text1"><%= data[0].name%></p>
+    <div id="img-radius" style="background: url('<%= data[0].url %>');" title="me" alt="me"></div>
+    <p class="text2"><%= data[0].job%></p>
+  </div>
+  <div class="block2">
+        <p class="text3"><%= data[0].reasons%></p>
+        <ul class="list">
+          <% for (var i = 0; i < data[1].items.length; i++) { %>
+          <li><%= data[1].items[i].item %></li>
+          <% } %>
+        </ul>
+      </div>
+  <div class="block3">
+        <p><%= data[2].tel %>
+        <span><%= data[2].number %></span></p>
+        <p class="text6"><%= data[2].fb %>
+        <span><a class="a_1" href="<%= data[1].fb_link %>" target="_blank"><%= data[2].text %></a></span></p>
+      </div>
+
+      <div class="block4">
+        <p><%= data[2].feedback %>
+        <span><%= data[2].feedback_text%></span></p>
+      </div>
+
+    </div> 
+  </script>
+</body>
+</html>
