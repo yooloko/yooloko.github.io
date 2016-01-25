@@ -1,80 +1,27 @@
-var app = {
+'use strict';
 
-  createElement: function(params) {
-    var element = document.createElement(params.tagName);
-
-    if (params.inputType){
-      element.setAttribute('type', params.inputType);
-    }
-
-    if (params.className){
-      element.className = params.className;
-    }
-
-    if (params.content){
-      element.innerHTML = params.content;
-    }
-
-    if (params.parentElement){
-      params.parentElement.appendChild(element);
-    }
-
-    return element;
+(function() {
+  var html = $('#test').html();
+  var dataObj = [{
+    question: 'Lorem ipsum',
+    options: [{'0Lorem ipsum'}, {'1Lorem ipsum'}, {'2Lorem ipsum'}],
+    correct: '0Lorem ipsum'
+  }, 
+  {
+    question: 'consectetur adipisicing',
+    options: [{'0Lorem ipsum'}, {'1Lorem ipsum'}, {'2Lorem ipsum'}],
+    correct: '2Lorem ipsum'
+  }, 
+  {
+    question: 'dolor sit amet',
+    options: [{'0Lorem ipsum'}, {'1Lorem ipsum'}, {'2Lorem ipsum'}],
+    correct: '1Lorem ipsum'
   },
+  {
+    submit_btn: 'Проверить мои результаты'
+  }];
 
-  generateQuestions: function(questionsAmount, answersAmount) {
+  var content = tmpl(html, {data: dataObj});
+  $('body').append(content);
 
-    for (var i = 0; i < questionsAmount; i++) {
-
-      this.createElement({
-        tagName: 'h2',
-        content: 'Вопрос №' + (i + 1),
-        parentElement: form
-      });
-
-      for (var j = 0; j < answersAmount; j++) {
-
-        var label = this.createElement({
-          tagName: 'label',
-          content: 'Вариант ответа №' + (j + 1),
-          parentElement: form
-        });
-
-        var checkbox = this.createElement({
-          tagName: 'input',
-          inputType: 'checkbox'
-        });
-
-        label.insertAdjacentElement('afterBegin', checkbox);
-      }
-
-    };
-
-  }
-
-}
-
-
-
-var body = document.querySelector('body');
-
-
-app.createElement({
-  tagName: 'h1',
-  content: 'Тест по программированию',
-  parentElement: body
-});
-
-var form = app.createElement({
-  tagName: 'form',
-  parentElement: body
-});
-
-app.generateQuestions(3, 3);
-
-app.createElement({
-  tagName: 'input',
-  inputType: 'submit',
-  content: 'Проверить мои результаты',
-  parentElement: form
-});
+})();

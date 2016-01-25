@@ -14,6 +14,11 @@
 		<div>
   		<% for (var i = 0; i < data.length - 1; i++) { %>
           <p><%= data[i].question %></p>
+          <ul>
+            <% for (var j = 0; j < data[i].ansOptions.length; j++) { %>
+              <li><input type="checkbox"><%= data[i].ansOptions[j]%></li>
+             <% } %>
+          </ul>
   		<% } %>
  		</div>
 	</script>
